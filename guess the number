@@ -1,0 +1,42 @@
+import java.io.*;
+class numbergame
+{
+    public static void main(String args[])throws IOException
+    {
+        DataInputStream x=new DataInputStream(System.in);
+        int max=100;int ctr=0;int min=0;
+        System.out.println("Only 4 attempts are allowed");
+        int a=-1+(int)(Math.random()*100);
+        System.out.println("Enter a random number from 1 to 100");
+        int num=Integer.parseInt(x.readLine());
+        while (a!=num)
+        {
+            ctr++;
+            if(a==num)
+            {
+                System.out.println("Rigth guess");
+            }
+            else if(a>num)
+            {
+                System.out.println("Too High");
+            }
+            else if(a<num)
+            {
+                System.out.println("Too low");
+            }
+            if(ctr==4)
+            {
+                break;
+            }
+            if(a!=num)
+            {
+                System.out.println("Enter again");
+                num=Integer.parseInt(x.readLine());
+            }
+        }
+        if(a==num)
+        {
+            System.out.println("Numberof chances used="+ctr);
+        }
+    }
+}
