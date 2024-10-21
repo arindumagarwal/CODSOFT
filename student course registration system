@@ -1,0 +1,23 @@
+import java.io.*;
+public class studentcourseregistrationsystem
+{
+    public static void main(String args[])throws IOException
+    {
+        DataInputStream x =  new  DataInputStream(System.in);
+        String course;
+        System.out.println("Enter the course details");
+        course = x.readLine();
+        System.out.println("Enter the course code");
+        int crr = Integer.parseInt(x.readLine());
+        System.out.println("Enter the studemt name,ID and registered course");
+        String name = x.readLine();
+        int stn = Integer.parseInt(x.readLine());
+        System.out.println("The details entered are = "+stn+" " +name+" " +course);
+        System.out.println("For exit press 1");
+        int num = Integer.parseInt(x.readLine());
+        while (num == 1) 
+        {
+            break;
+        }
+    }
+}
