@@ -1,0 +1,28 @@
+import java.io.*;
+class studentgradecalculaor
+{
+public static void main(String args[])throws IOException
+{
+    DataInputStream x=new DataInputStream(System.in);
+    System.out.println("Enter the marks of 5 subjects");
+    int m=Integer.parseInt(x.readLine());
+    int n=Integer.parseInt(x.readLine());
+    int o=Integer.parseInt(x.readLine());
+    int p=Integer.parseInt(x.readLine());
+    int q=Integer.parseInt(x.readLine());
+    int sum=m+n+o+p+q;
+    int avgper=sum/5;
+    if (avgper>=90)
+    System.out.println("Grade A");
+    else if (avgper>=80&&avgper<=89)
+    System.out.println("Grade B");
+    else if (avgper>=70&&avgper<=79)
+    System.out.println("Grade C");
+    else if (avgper>=60&&avgper<=69)
+    System.out.println("Grade D");
+    else if (avgper<=59)
+    System.out.println("Grade E");
+    System.out.println("Sum ="+sum);
+    System.out.println("Average ="+avgper+"%");
+}
+}
